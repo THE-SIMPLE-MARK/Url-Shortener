@@ -33,8 +33,6 @@ export default async function CreateLink(
       message: 'Expected HTTP header "url" with a value type of "String".',
     })
 
-  const domain = process.env.DOMAIN || `https://${process.env.VERCEL_URL}`
-
   // check if the link already exists
   // if it does then just send that one
   const linkExists = await prisma.link.findUnique({
@@ -49,7 +47,7 @@ export default async function CreateLink(
     return response.status(200).send({
       code: 200,
       message: "The link has already been created.",
-      shortUrl: `${domain}/${linkExists.shortId}`,
+      shortUrl: `${process.env.DOMAIN}/${linkExists.shortId}`,
     })
 
   // create new link and send it
@@ -66,6 +64,6 @@ export default async function CreateLink(
   response.status(201).send({
     code: 201,
     message: "Successfully created",
-    shortUrl: `${domain}/${shortId}`,
+    shortUrl: `${process.env.DOMAIN}/${shortId}`,
   })
 }
