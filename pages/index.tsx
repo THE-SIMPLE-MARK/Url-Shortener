@@ -16,7 +16,7 @@ export default function Home() {
         <h1>Welcome to my URL shortener!</h1>
         <hr />
         <p>This is just a URL shortner I made for myself for fun.</p>
-        <div
+        <footer
           style={{
             position: "fixed",
             bottom: "10px",
@@ -24,8 +24,8 @@ export default function Home() {
             textAlign: "center",
           }}
         >
-          <footer>© 2023 SIMPLE MARK</footer>
-        </div>
+          © 2023 SIMPLE MARK
+        </footer>
       </main>
     </>
   )
