@@ -9,7 +9,7 @@ datasource db {
 
 model Link {
 	id String @id @default(uuid())
-	publicId String @unique
+	shortId String @unique
 	originalUrl String @unique
 	createdAt DateTime @default(now())
 }
