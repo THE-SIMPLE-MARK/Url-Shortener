@@ -6,18 +6,28 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write .",
+    "prisma:studio": "npx prisma studio",
+    "prisma:format": "npx prisma format",
+    "prisma:push": "npx prisma db push"
   },
   "dependencies": {
     "@next/font": "13.1.5",
+    "@prisma/client": "^4.9.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
+    "colorette": "^2.0.19",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
     "next": "13.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "4.9.4"
+    "typescript": "4.9.4",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "prisma": "^4.9.0"
   }
 }
