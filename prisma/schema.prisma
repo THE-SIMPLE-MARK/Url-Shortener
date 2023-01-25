@@ -8,8 +8,8 @@ datasource db {
 }
 
 model Link {
-	id String @id @default(uuid())
-	shortId String @unique
-	originalUrl String @unique
-	createdAt DateTime @default(now())
+  id          String   @id @default(cuid())
+  shortId     String   @unique
+  originalUrl String   @unique
+  createdAt   DateTime @default(now())
 }
