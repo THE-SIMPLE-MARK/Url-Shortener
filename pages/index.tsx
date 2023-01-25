@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Welcome to my url shortener!</h1>
+        <h1>Welcome to my URL shortener!</h1>
         <hr />
         <p>This is just a URL shortner I made for myself for fun.</p>
         <div
